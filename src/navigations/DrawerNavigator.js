@@ -10,8 +10,8 @@ export default function DrawerNavigator() {
 
     return (
         <Drawer.Navigator>
-            <Drawer.Screen name="Expenses" component={ExpenseNavigator}></Drawer.Screen>
             <Drawer.Screen name="Accounts" component={AccountNavigator}></Drawer.Screen>
+            <Drawer.Screen name="Expenses" component={ExpenseNavigator}></Drawer.Screen>
         </Drawer.Navigator>
     )
 }
