@@ -1,16 +1,12 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import {Header} from 'react-native-elements'
-import SideMenuIcon from '../components/SideMenuIcon'
+
+import HeaderBar from '../components/HeaderBar'
 
 export default function AccountsScreen({navigation}) {
     return (
         <View>
-            <Header
-                leftComponent={<SideMenuIcon navigation={navigation} />}
-                centerComponent={{ text: 'Accounts', style: { color: '#fff' } }}
-                rightComponent={{ icon: 'home', color: '#fff' }}
-            />
+            <HeaderBar navigation={navigation} title="Accounts" />
             <Text>AccountsScreen</Text>
         </View>
     )
