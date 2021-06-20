@@ -1,12 +1,15 @@
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
 import HeaderBar from '../components/HeaderBar'
 
-export default function AccountsScreen({navigation}) {
+export default function AccountsScreen() {
+    const navigation = useNavigation()
+    
     return (
         <View>
-            <HeaderBar navigation={navigation} title="Accounts" />
+            <HeaderBar title="Accounts" />
             <Text>AccountsScreen</Text>
         </View>
     )

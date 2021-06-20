@@ -1,9 +1,12 @@
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { StyleSheet, Text, View, FlatList } from 'react-native'
 import { ListItem, Icon, Button } from 'react-native-elements'
 import HeaderBar from '../components/HeaderBar'
 
-export default function ExpensesScreen({ navigation }) {
+export default function ExpensesScreen() {
+    const navigation = useNavigation()
+
     const list = [
         {
             name: 'Burger',
@@ -29,7 +32,7 @@ export default function ExpensesScreen({ navigation }) {
 
     return (
         <View>
-            <HeaderBar navigation={navigation} title="Expenses" />
+            <HeaderBar title="Expenses" />
             {
                 list.map((l, i) => (
                     <ListItem.Swipeable

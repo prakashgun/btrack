@@ -3,10 +3,10 @@ import { StyleSheet, View } from 'react-native'
 import { Input } from 'react-native-elements'
 import HeaderBar from '../components/HeaderBar'
 
-export default function AddExpenseScreen({ navigation }) {
+export default function AddExpenseScreen() {
     return (
         <View>
-            <HeaderBar navigation={navigation} title="Add Expense" />
+            <HeaderBar title="Add Expense" />
             <Input
                 placeholder="Amount"
                 keyboardType="numeric"

@@ -3,11 +3,11 @@ import { StyleSheet, View } from 'react-native'
 import { Header } from 'react-native-elements'
 import SideMenuIcon from './SideMenuIcon'
 
-export default function HeaderBar({navigation, title}) {
+export default function HeaderBar({title}) {
     return (
         <View>
             <Header
-                leftComponent={<SideMenuIcon navigation={navigation} />}
+                leftComponent={<SideMenuIcon />}
                 centerComponent={{ text: title }}
                 rightComponent={{ icon: 'home' }}
             />
