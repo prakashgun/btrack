@@ -1,23 +1,12 @@
-import { createDrawerNavigator } from '@react-navigation/drawer'
-import { NavigationContainer } from '@react-navigation/native'
+import 'react-native-gesture-handler'
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import AccountsScreen from './src/screens/AccountsScreen'
-import AddExpenseScreen from './src/screens/AddExpenseScreen'
-import ExpensesScreen from './src/screens/ExpensesScreen'
+import AppNavContainer from './src/navigations/AppNavContainer'
 
 export default function App() {
-  const Drawer = createDrawerNavigator()
-  
   return (
-    <NavigationContainer>
-      <Drawer.Navigator initialRouteName="ExpensesScreen">
-        <Drawer.Screen name="Expenses" component={ExpensesScreen} />
-        <Drawer.Screen name="Accounts" component={AccountsScreen} />
-        <Drawer.Screen name="AddExpense" component={AddExpenseScreen} />
-      </Drawer.Navigator>
-    </NavigationContainer>
+    <AppNavContainer />
   )
 }
 
-const styles = StyleSheet.create({})  
+const styles = StyleSheet.create({})
