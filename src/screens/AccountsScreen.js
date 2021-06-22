@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
-import { ListItem, Button,Icon } from 'react-native-elements'
+import { StyleSheet, View, Text } from 'react-native'
+import { ListItem, Button, Icon } from 'react-native-elements'
 import HeaderBar from '../components/HeaderBar'
 
 
@@ -11,8 +11,8 @@ export default function AccountsScreen() {
     const list = [
         {
             name: 'Cash',
-            icon_name: 'cash',
-            icon_type: 'ionicon',
+            icon_name: 'bank',
+            icon_type: 'font-awesome',
             amount: 10000
         },
         {
@@ -44,7 +44,7 @@ export default function AccountsScreen() {
                                 title="Delete"
                                 icon={{ name: 'delete', color: 'white' }}
                                 buttonStyle={styles.deleteButton}
-                                onPress={onDeletePress} /> 
+                                onPress={onDeletePress} />
                         }
                     >
                         <Icon name={l.icon_name} type={l.icon_type} />
@@ -57,6 +57,15 @@ export default function AccountsScreen() {
                     </ListItem.Swipeable>
                 ))
             }
+            <ListItem>
+                <Icon name="account-balance-wallet" type="material-icons" />
+                <ListItem.Content> 
+                    <ListItem.Title>Balance</ListItem.Title>
+                </ListItem.Content>
+                <ListItem.Content right={true}>
+                    <Text>1780000</Text>
+                </ListItem.Content>
+            </ListItem>
             <Button
                 icon={
                     <Icon
@@ -72,4 +81,9 @@ export default function AccountsScreen() {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    deleteButton: {
+        minHeight: '100%',
+        backgroundColor: 'red'
+    }
+})
